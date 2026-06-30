@@ -4,7 +4,7 @@
   "description": "Web data for AI agents — search, scrape, crawl, extract, research & proxy, via the Novada MCP server.",
   "author": { "name": "Novada", "email": "support@novada.com" },
   "homepage": "https://www.novada.com",
-  "repository": "https://github.com/NovadaLabs/novada-claude-plugins",
+  "repository": "https://github.com/NovadaLabs/Novada-plugins",
   "license": "MIT",
   "keywords": ["mcp", "web-scraping", "web-search", "proxy", "research", "novada", "rag"]
 }

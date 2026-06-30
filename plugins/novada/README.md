@@ -5,7 +5,7 @@ Web data for your agent — **search, scrape, crawl, extract, research & proxy**
 ## Install
 
 ```
-/plugin marketplace add NovadaLabs/novada-claude-plugins
+/plugin marketplace add NovadaLabs/Novada-plugins
 /plugin install novada@novada
 ```
 

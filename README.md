@@ -5,7 +5,7 @@ Official [Novada](https://www.novada.com) marketplace for Claude Code.
 ## Install
 
 ```
-/plugin marketplace add NovadaLabs/novada-claude-plugins
+/plugin marketplace add NovadaLabs/Novada-plugins
 /plugin install novada@novada
 export NOVADA_API_KEY=nvd_...
 ```
