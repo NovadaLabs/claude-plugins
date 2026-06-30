@@ -1,0 +1,15 @@
+{
+  "name": "novada",
+  "owner": { "name": "Novada", "email": "support@novada.com" },
+  "metadata": {
+    "description": "Novada — web data tools for AI agents: search, scrape, crawl, extract, research & proxy.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "novada",
+      "source": "./plugins/novada",
+      "description": "Web search, scraping, crawling, extraction, research & proxy via the Novada MCP server."
+    }
+  ]
+}
