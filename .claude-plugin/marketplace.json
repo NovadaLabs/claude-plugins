@@ -1,15 +1,15 @@
 {
   "name": "novada",
-  "owner": { "name": "Novada", "email": "support@novada.com" },
-  "metadata": {
-    "description": "Novada — web data tools for AI agents: search, scrape, crawl, extract, research & proxy.",
-    "version": "0.1.0"
+  "owner": {
+    "name": "NovadaLabs",
+    "email": "support@novada.com"
   },
   "plugins": [
     {
-      "name": "novada",
-      "source": "./plugins/novada",
-      "description": "Web search, scraping, crawling, extraction, research & proxy via the Novada MCP server."
+      "name": "novada-mcp",
+      "source": "./plugins/novada-mcp",
+      "description": "23 MCP tools for web data: search, scrape, extract, crawl, map, browser automation, multi-source research, claim verification, account management, and proxy provisioning. Hosted endpoint at mcp.novada.com — zero local install, one NOVADA_API_KEY. 1,000 free calls/month.",
+      "homepage": "https://novada.com/products/novada-mcp/"
     }
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "name": "novada-mcp",
+  "version": "0.9.27",
+  "description": "23 MCP tools for web data — search, scrape, extract, crawl, map, browser automation, multi-source research, claim verification, account management, and proxy provisioning. Hosted endpoint at mcp.novada.com: zero local install, no extra dependencies. One NOVADA_API_KEY covers every tool. 1,000 free calls/month on the free plan; paid accounts are uncapped.",
+  "author": {
+    "name": "NovadaLabs"
+  },
+  "homepage": "https://novada.com/products/novada-mcp/",
+  "license": "MIT"
+}
