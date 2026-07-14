@@ -7,7 +7,7 @@ Official [Novada](https://novada.com) plugin marketplace for Claude Code. Ships 
 ## 2-step install
 
 ```
-/plugin marketplace add NovadaLabs/novada-claude-plugins
+/plugin marketplace add NovadaLabs/claude-plugins
 /plugin install novada-mcp@novada
 ```
 
