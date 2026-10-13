@@ -7,7 +7,7 @@ it only registers that remote connection and authenticates it with your own Nova
 account through OAuth sign-in. There is no local server process, no `npx`, and no
 API key to paste into a config file.
 
-## Tools (29)
+## Tools (28)
 
 - `novada_search` — Web search returning titles, URLs, and snippets, reranked by relevance.
 - `novada_extract` — Extract content from any URL, with automatic anti-bot escalation (static fetch, then JS rendering, then a managed browser).
@@ -20,13 +20,12 @@ API key to paste into a config file.
 - `novada_scrape_bing` — Structured Bing web, video, news, and shopping results.
 - `novada_scrape_duckduckgo` — Structured DuckDuckGo web search results.
 - `novada_scrape_yandex` — Structured Yandex web search results.
-- `novada_scrape_youtube` — YouTube video, channel, transcript, and comment data.
+- `novada_scrape_youtube` — YouTube video, channel, and comment data.
 - `novada_scrape_instagram` — Instagram profile, post, reel, and comment data.
 - `novada_scrape_facebook` — Public Facebook profile, post, comment, and event data.
 - `novada_scrape_tiktok` — TikTok profile and post data, including hashtag and search listings.
 - `novada_scrape_x` — X (Twitter) post and profile lookups.
 - `novada_scrape_walmart` — Structured Walmart product data by keyword, category, SKU, or URL.
-- `novada_scrape_shein` — Structured SHEIN product data by product ID or URL.
 - `novada_scrape_linkedin` — LinkedIn job listings and company profile data.
 - `novada_scrape_github` — GitHub repository metadata, including search-result listings.
 - `novada_scrape_perplexity` — The generated answer Perplexity returns for a query.

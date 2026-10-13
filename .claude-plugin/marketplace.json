@@ -9,7 +9,7 @@
     {
       "name": "novada-mcp",
       "source": "./plugins/novada-mcp",
-      "description": "29 MCP tools for web search, scraping, extraction, crawling, and account management. Hosted at mcp.novada.com, OAuth sign-in. 1,000 free calls/month, uncapped for paid accounts.",
+      "description": "28 MCP tools for web search, scraping, extraction, crawling, and account management. Hosted at mcp.novada.com, OAuth sign-in.",
       "homepage": "https://novada.com/products/novada-mcp/"
     }
   ]
