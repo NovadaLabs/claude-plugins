@@ -1,10 +1,22 @@
 {
   "name": "novada-mcp",
-  "version": "0.9.27",
-  "description": "23 MCP tools for web data — search, scrape, extract, crawl, map, browser automation, multi-source research, claim verification, account management, and proxy provisioning. Hosted endpoint at mcp.novada.com: zero local install, no extra dependencies. One NOVADA_API_KEY covers every tool. 1,000 free calls/month on the free plan; paid accounts are uncapped.",
+  "version": "0.9.28",
+  "description": "30 MCP tools for web search, scraping, extraction, crawling, browser automation, and account management. Hosted at mcp.novada.com, OAuth sign-in. 1,000 free calls/month, uncapped for paid accounts.",
   "author": {
-    "name": "NovadaLabs"
+    "name": "Novada",
+    "email": "support@novada.com",
+    "url": "https://www.novada.com"
   },
   "homepage": "https://novada.com/products/novada-mcp/",
-  "license": "MIT"
+  "repository": "https://github.com/NovadaLabs/claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "web-search",
+    "web-scraping",
+    "web-extraction",
+    "browser-automation",
+    "proxy",
+    "mcp"
+  ],
+  "privacyPolicyUrl": "https://novada.com/privacy"
 }
