@@ -116,5 +116,15 @@ decrypt it back to your API key for that attribution; it is not an anonymized or
 one-way hash. Argument values, search query text, and full target URLs are never
 included in either destination.
 
+Separately, when the hosted server hits an unexpected server error — not a
+handled user- or upstream-caused failure, which only leaves a server-side
+diagnostic trail and is never sent onward — that error is reported to Sentry,
+a third-party error-monitoring provider. A report contains the tool name, the
+Novada error code and retryable flag when applicable, a redacted exception
+message and stack trace, the request URL with any credential replaced by a
+placeholder, and only the user-agent, content-type, and accept request
+headers. It never contains your API key or OAuth token, the request body,
+cookies, or any other request header.
+
 **Policies and support.** Privacy policy: `https://novada.com/privacy`. Support:
 `support@novada.com`.
