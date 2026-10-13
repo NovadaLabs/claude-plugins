@@ -1,7 +1,7 @@
 {
   "name": "novada-mcp",
   "version": "0.9.28",
-  "description": "30 MCP tools for web search, scraping, extraction, crawling, browser automation, and account management. Hosted at mcp.novada.com, OAuth sign-in. 1,000 free calls/month, uncapped for paid accounts.",
+  "description": "29 MCP tools for web search, scraping, extraction, crawling, and account management. Hosted at mcp.novada.com, OAuth sign-in. 1,000 free calls/month, uncapped for paid accounts.",
   "author": {
     "name": "Novada",
     "email": "support@novada.com",
@@ -14,7 +14,6 @@
     "web-search",
     "web-scraping",
     "web-extraction",
-    "browser-automation",
     "proxy",
     "mcp"
   ],

@@ -2,7 +2,7 @@
 
 Official [Novada](https://novada.com) plugin marketplace for Claude Code. Ships one plugin: **novada-mcp**, which connects Claude Code to the Novada hosted MCP server at [mcp.novada.com/mcp](https://mcp.novada.com/mcp).
 
-30 tools across web search, scraping, extraction, crawling, site mapping, browser automation, multi-source research, account management, and proxy provisioning.
+29 tools across web search, scraping, extraction, crawling, site mapping, multi-source research, account management, and proxy provisioning.
 
 ## 2-step install
 
