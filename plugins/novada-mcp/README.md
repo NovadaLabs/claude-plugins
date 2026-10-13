@@ -1,13 +1,13 @@
 # Novada MCP
 
 Novada MCP connects Claude to Novada's hosted web-data platform: search, scraping,
-extraction, crawling, browser automation, and account management, all through one
+extraction, crawling, and account management, all through one
 remote MCP server at `https://mcp.novada.com/mcp`. The plugin ships no local code —
 it only registers that remote connection and authenticates it with your own Novada
 account through OAuth sign-in. There is no local server process, no `npx`, and no
 API key to paste into a config file.
 
-## Tools (30)
+## Tools (29)
 
 - `novada_search` — Web search returning titles, URLs, and snippets, reranked by relevance.
 - `novada_extract` — Extract content from any URL, with automatic anti-bot escalation (static fetch, then JS rendering, then a managed browser).
@@ -31,7 +31,6 @@ API key to paste into a config file.
 - `novada_scrape_github` — GitHub repository metadata, including search-result listings.
 - `novada_scrape_perplexity` — The generated answer Perplexity returns for a query.
 - `novada_proxy` — Issue a residential or mobile proxy endpoint for the caller's own HTTP requests.
-- `novada_browser` — Drive a web page interactively: click, fill forms, scroll, screenshot, or run JavaScript.
 - `novada_discover` — List every tool this server exposes, with category and status.
 - `novada_ai_monitor` — Search public pages on AI-company domains for brand mentions and sentiment.
 - `novada_monitor` — Track a page over time and report what changed since the last check.
@@ -79,11 +78,13 @@ plaintext. Authorization codes expire after 2 minutes; access tokens expire afte
 registrations expire after 180 days.
 
 **Backend hosts this server calls.** Depending on which tool you invoke, the hosted
-MCP server forwards your request to one of Novada's own backend hosts:
-`https://api-m.novada.com` (account, wallet, and key verification),
-`https://scraper.novada.com` (the platform-scraping tools), and
-`https://webunlocker.novada.com` (extraction, crawling, mapping, and browser
-automation). A legacy result-download path also uses `https://api.novada.com`.
+MCP server forwards your request to one of Novada's own backend hosts. This list
+covers where tool-call traffic is routed; it is not a complete inventory of every
+host Novada operates, and it is separate from where your usage data itself is sent
+(see "Where usage data goes" below): `https://api-m.novada.com` (account, wallet,
+and key verification), `https://scraper.novada.com` (the platform-scraping tools),
+and `https://webunlocker.novada.com` (extraction, crawling, and mapping). A legacy
+result-download path also uses `https://api.novada.com`.
 
 **Target URLs you ask it to fetch.** When you ask a tool to read, scrape, or crawl
 a URL (for example, a product page or a search-engine result), that page is
@@ -95,10 +96,25 @@ from your machine, and the response is returned to Claude through the same
 the tool name, the argument key names (never argument values, with one exception —
 four allowlisted fields, `operation`, `platform`, `render`, and `format`, whose
 closed enum values are recorded), the hostname only of any target URL (never its
-path, query string, port, or credentials), outcome, latency, and an encrypted
-identity token derived from your API key. It never records argument values, search
-query text, full target URLs, or raw error messages. If the telemetry backend is
-not configured, no telemetry calls happen at all.
+path, query string, port, or credentials), outcome, latency, and an identity token
+tied to your API key (see "Where usage data goes" for what that token is and who
+can decrypt it). It never records argument values, search query text, full target
+URLs, or raw error messages. If the telemetry backend is not configured, no
+telemetry calls happen at all.
+
+**Where usage data goes.** The hosted server writes the metadata described above to
+Novada's telemetry database, which runs on Supabase (a third-party cloud database
+provider), for every call it handles, including a rejected or rate-limited one.
+For a tool call it actually dispatches (that is, every normal, authenticated tool
+call), it also forwards select fields from that same event — the tool name, the
+operation, the target hostname, the outcome, the latency, and the identity token
+below, but not the argument key names above — to Novada's internal operations
+logging system, which Novada support and engineering use to diagnose failures and
+attribute usage to your account. That identity token is encrypted with AES-256-GCM
+under a key only Novada holds, and it is specifically designed so Novada can
+decrypt it back to your API key for that attribution; it is not an anonymized or
+one-way hash. Argument values, search query text, and full target URLs are never
+included in either destination.
 
 **Policies and support.** Privacy policy: `https://novada.com/privacy`. Support:
 `support@novada.com`.
