@@ -2,7 +2,7 @@
 
 Official [Novada](https://novada.com) plugin marketplace for Claude Code. Ships one plugin: **novada-mcp**, which connects Claude Code to the Novada hosted MCP server at [mcp.novada.com/mcp](https://mcp.novada.com/mcp).
 
-23 tools across web search, scraping, extraction, crawling, site mapping, browser automation, multi-source research, claim verification, account management, and proxy provisioning — all behind a single `NOVADA_API_KEY`.
+28 tools across web search, scraping, extraction, crawling, site mapping, multi-source research, account management, and proxy provisioning.
 
 ## 2-step install
 
@@ -11,23 +11,17 @@ Official [Novada](https://novada.com) plugin marketplace for Claude Code. Ships 
 /plugin install novada-mcp@novada
 ```
 
-Then set your API key:
-
-```bash
-export NOVADA_API_KEY=<your-key>
-```
-
-Get a key at <https://dashboard.novada.com/api-key/> — 1,000 free calls/month on the free plan; paid accounts are uncapped.
+Then run `/mcp` and sign in with your Novada account when prompted. No API key needs to be pasted into any config file or environment variable — the plugin authenticates over OAuth. Don't have a Novada account yet? Create one at <https://novada.com>; see <https://www.novada.com> for current pricing.
 
 ## How it works
 
-The plugin wires Claude Code to the **hosted** Novada MCP endpoint (`https://mcp.novada.com/mcp`). No `npx`, no local server process, no extra dependencies. Claude Code starts the connection automatically when the plugin is active.
+The plugin wires Claude Code to the **hosted** Novada MCP endpoint (`https://mcp.novada.com/mcp`). No `npx`, no local server process, no extra dependencies. Claude Code starts the connection automatically when the plugin is active, then prompts an OAuth sign-in the first time you use it.
 
-Your key is passed as a `Bearer` token on every request. The hosted server validates and bills against your own Novada balance.
+See [plugins/novada-mcp/README.md](https://github.com/NovadaLabs/claude-plugins/blob/main/plugins/novada-mcp/README.md) for the full tool list and the network and data disclosure.
 
 ## Manual MCP config (no plugin required)
 
-If you prefer to configure MCP directly instead of using the plugin system:
+If you prefer to configure MCP directly instead of using the plugin system, the hosted endpoint also accepts a Novada API key as a `Bearer` token — this path is independent of the plugin's OAuth flow and suits a project `.mcp.json` you check into version control:
 
 **Hosted endpoint (recommended):**
 
@@ -84,4 +78,4 @@ claude mcp add --transport stdio novada \
 
 ## License
 
-MIT © NovadaLabs
+MIT © Novada

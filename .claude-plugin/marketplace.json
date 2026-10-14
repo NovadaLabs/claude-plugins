@@ -1,5 +1,6 @@
 {
   "name": "novada",
+  "description": "Official Novada plugin marketplace for Claude Code, Claude Desktop, and claude.ai.",
   "owner": {
     "name": "NovadaLabs",
     "email": "support@novada.com"
@@ -8,7 +9,7 @@
     {
       "name": "novada-mcp",
       "source": "./plugins/novada-mcp",
-      "description": "23 MCP tools for web data: search, scrape, extract, crawl, map, browser automation, multi-source research, claim verification, account management, and proxy provisioning. Hosted endpoint at mcp.novada.com — zero local install, one NOVADA_API_KEY. 1,000 free calls/month.",
+      "description": "28 MCP tools for web search, scraping, extraction, crawling, and account management. Hosted at mcp.novada.com, OAuth sign-in.",
       "homepage": "https://novada.com/products/novada-mcp/"
     }
   ]
