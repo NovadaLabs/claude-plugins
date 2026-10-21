@@ -38,6 +38,14 @@ API key to paste into a config file.
 - `novada_proxy_account_create` — Create a proxy sub-account under the caller's plan.
 - `novada_proxy_account_list` — List the proxy sub-accounts under the caller's plan.
 
+## Example prompts
+
+- "Search the web for the latest EU AI Act compliance deadlines and summarize the top five results."
+- "Extract the pricing table from https://example.com/pricing and turn it into a markdown table."
+- "Scrape the first page of Amazon search results for 'wireless earbuds' and compare price and rating."
+- "Crawl the docs section of https://example.com/docs and summarize what changed in the API reference."
+- "Check my Novada account balance and tell me which plans are close to running out."
+
 ## Connect
 
 **Claude Code**
