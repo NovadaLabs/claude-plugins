@@ -41,9 +41,9 @@ API key to paste into a config file.
 ## Example prompts
 
 - "Search the web for the latest EU AI Act compliance deadlines and summarize the top five results."
-- "Extract the pricing table from https://example.com/pricing and turn it into a markdown table."
-- "Scrape the first page of Amazon search results for 'wireless earbuds' and compare price and rating."
-- "Crawl the docs section of https://example.com/docs and summarize what changed in the API reference."
+- "Extract the main points from https://modelcontextprotocol.io/introduction as a short bullet list."
+- "Map the pages under https://docs.python.org/3/tutorial/ and list the tutorial sections."
+- "Scrape Amazon search results for 'wireless earbuds' and compare the top five by price and rating."
 - "Check my Novada account balance and tell me which plans are close to running out."
 
 ## Connect
