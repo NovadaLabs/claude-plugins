@@ -38,6 +38,14 @@ API key to paste into a config file.
 - `novada_proxy_account_create` — Create a proxy sub-account under the caller's plan.
 - `novada_proxy_account_list` — List the proxy sub-accounts under the caller's plan.
 
+## Example prompts
+
+- "Search the web for the latest EU AI Act compliance deadlines and summarize the top five results."
+- "Extract the main points from https://modelcontextprotocol.io/introduction as a short bullet list."
+- "List the pages on https://modelcontextprotocol.io and group them by section."
+- "Research how remote MCP servers handle OAuth sign-in and cite three sources."
+- "Check my Novada account balance and tell me which plans are close to running out."
+
 ## Connect
 
 **Claude Code**
