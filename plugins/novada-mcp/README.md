@@ -42,8 +42,8 @@ API key to paste into a config file.
 
 - "Search the web for the latest EU AI Act compliance deadlines and summarize the top five results."
 - "Extract the main points from https://modelcontextprotocol.io/introduction as a short bullet list."
-- "Map the pages under https://docs.python.org/3/tutorial/ and list the tutorial sections."
-- "Scrape Amazon search results for 'wireless earbuds' and compare the top five by price and rating."
+- "List the pages on https://modelcontextprotocol.io and group them by section."
+- "Research how remote MCP servers handle OAuth sign-in and cite three sources."
 - "Check my Novada account balance and tell me which plans are close to running out."
 
 ## Connect
